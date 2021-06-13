@@ -1,0 +1,37 @@
+import Foundation
+
+var someInts:[Int] = [1, 2, 3, 4]
+
+// find mean
+let count = someInts.count
+let sum = someInts.reduce(0, +)
+let mean = sum / count
+
+// find geometric mean
+let product = someInts.reduce(1, *)
+let productFloat = Float(product)
+
+print("Task#1")
+print("average =", mean)
+print("geometric mean =", productFloat.squareRoot())
+
+// find roots of a quadratic equation
+
+var a :Double = 1
+var b :Double = 4
+var c :Double = 2
+
+var under_the_root = pow(b,2) - 4 * a * c
+
+var root = sqrt(under_the_root)
+var numerator_1 : Double = -b + root
+var numerator_2 : Double = -b - root
+var denominator : Double = 2 * a
+
+// calculate roots
+var root1: Double = numerator_1 / denominator
+var root2: Double = numerator_2 / denominator
+
+print("Task#2")
+print(a,"*x^2+",b,"*x+",c,"=0")
+print("root1=",root1,"root2=",root2)
